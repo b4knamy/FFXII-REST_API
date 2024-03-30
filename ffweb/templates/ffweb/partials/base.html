@@ -1,0 +1,20 @@
+{% load static %}
+
+{% include "partials/head.html" %}
+
+    <body>
+
+        {% include "partials/navbar.html" %}
+
+        {% block main_content %}
+
+        {% endblock main_content %}
+
+        {% include "partials/footer.html" %}
+        
+    <script src="https://kit.fontawesome.com/24f940359f.js" crossorigin="anonymous"></script>
+    <script src="{% static 'ffweb/js/index.js' %}" ></script>
+    
+    </body>
+
+</html>

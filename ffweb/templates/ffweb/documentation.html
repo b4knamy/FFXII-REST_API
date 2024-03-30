@@ -1,0 +1,86 @@
+{% extends 'partials/base.html' %}
+
+{% load static %}
+
+{% block main_content %}
+    <div class="documentation-content-container">
+        <h1>
+            FFXII API Documentation
+        </h1>
+        <p>
+            This API is free without request limit, you can take how many times you want
+            but it just support until 2 parameters, we'll see more about later.
+        </p>
+        <div class="each-api-option">
+            <h2><em>Data options</em></h2>
+            <p>
+                First of all, you put that URL <strong><em>"domain/api/"</em></strong>, after that, you have two choices: getting <strong><em>"Espers"</em></strong> or <strong><em>"Characters"</em></strong> data.
+            </p>
+            <code>
+                <pre>
+                    "http://127.0.0.1:8000/api/characters"
+                </pre>
+            </code>
+            <p>or</p>
+            <code>
+                <pre>
+                    "http://127.0.0.1:8000/api/espers"
+                </pre>
+            </code>
+        </div>
+        <div class="each-api-option">
+            <h2><em>Getting All Data</em></h2>
+            <p>
+                To get all data, you put the keyword <strong><em>"/all"</em></strong> for characters or espers, this is totally up to you, it will look like this:
+            </p>
+            <code>
+                <pre>
+                    "http://127.0.0.1:8000/api/characters/all"
+                </pre>
+            </code>
+        </div>
+        <div class="each-api-option">
+            <h2><em>Getting especific data</em></h2>
+            <p>
+                Now, to get  an especific data, you can use <strong><em>"/filter"</em></strong>  instead, but you have to set a parameter, which depends of what you want. <br>
+                For example, lets filter using a name:
+            </p>
+            <code>
+                <pre>
+                    "http://127.0.0.1:8000/api/characters/filter?name=vaan"
+                </pre>
+            </code>
+        </div>
+        <div class="each-api-option">
+            <h2><em>Parameter "limit"</em></h2>
+            <p>
+                As this is a small project, FFXII API just allow GET requests with only two parameters.
+                The <strong><em>"limit"</em></strong> parameter will always be the last parameter, if you are using two parameters, it will look like this:
+            </p>
+            <code>
+                <pre>
+                    "http://127.0.0.1:8000/api/characters/filter?hometown=archades&limit=3"
+                </pre>
+            </code>
+            <p>otherwise, if you want all the datas for example, you can just use <strong><em>"limit"</em></strong>.</p>
+            <code>
+                <pre>
+                    "http://127.0.0.1:8000/api/espers/all?limit=3"
+                </pre>
+            </code>
+        </div>
+        <div class="flex-column doc-greetings">
+            <h2>That's all for now, I hope you liked!</h2>
+            <img style="margin: 0 auto;" src="{% static 'ffweb/images/bar-gif.gif' %}" alt="">
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.body.classList.add('documentation');
+            document.querySelector('footer').style.color = 'rgb(0, 0, 0)';
+
+        })
+        
+    </script>
+{% endblock main_content %}

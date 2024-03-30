@@ -1,0 +1,60 @@
+{% extends "partials/base.html" %}
+
+
+
+{% block main_content %}
+
+    <div class="main-content-container flex-column">
+        <div class="text-apresentation-container flex-row">
+          <span class="text-apresentation-content"><span class="text-apresentation"></span></span>
+        </div>
+        <section class="content-container flex-column">
+            <div class="content-interact-container flex-column">
+                <form class="form-api flex-row">
+                    <input id="url" type="url" placeholder="URL" value="http://127.0.0.1:8000/api/">
+                    <input id="submit" type="submit" value="Search">
+                </form>
+                <div class="url-options flex-row">
+                    <button onclick="getVaanUrl()">Vaan</button>
+                    <button onclick="getAllCharUrl()">All characters</button>
+                    <button onclick="getZodiarkUrl()">Zodiark</button>
+                    <button onclick="getAllEsperUrl()">All Espers</button>
+                    <span style="color: white;">read the docs for more.</span>
+                </div>
+            </div>
+            <div class="content-view-container">
+                <div id="json" class="content-view flex-column">
+                    <span id="request-status"></span>
+                    <code>
+
+                        <pre class="pre-code">
+
+                        </pre>
+                    </code>
+                </div>
+            </div>
+            
+        </section>
+    </div>
+
+    <script>
+        document.body.classList.add('home')
+        var text = document.querySelector('.text-apresentation');
+        var title = "Final Fantasy XII API ";
+        let count = 0;
+
+        setInterval(() => {
+            if (count <= title.length - 1) {
+                text.innerHTML += title[count];
+                
+            };
+            count++;
+            if (count >= 100) {
+                count = 0;
+                text.innerHTML = "";
+            }
+        }, 100);
+
+    </script>
+
+{% endblock main_content %}

@@ -1,0 +1,51 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+
+
+
+{% block main_content %}
+    <div class="about-content-container flex-column">
+        <h1>This is a API Project made by me, Rogério França.</h1>
+        <div>
+            <span>This is gonna be a short review of this project. I made this project to practice what I've learned so far with Django and I choose FFXII because it is my favorite game.</span>
+        
+        <p>
+            <em>Step 1:</em> <br>
+             I started creating my API hard coded, which is not big but it's ok for a small practice project</p>
+        <p>
+            <em>Step 2:</em> <br>
+            I created my models Esper and Character and placed the data into the database using django shell
+        </p>
+        <p>
+            <em>Step 3:</em> <br>
+            I moved for create my home page and 
+            figuring out how it would look like, after many tries I got that.
+        </p>
+        <p>
+            <em>Step 4:</em> <br>
+            After all those steps completed, I could implement my API. I made my API's views and started my tests to see how it would be.
+        </p>
+        <p>
+            <em>Step 5:</em> <br>
+            I implemented my TDDs, I know it is better if I started creating those tests in the beginning as the project is growing up, but how it is a small project
+            I decided to make it all in the end.
+        </p>
+        <p>
+            <em>Step 6 (the last):</em> <br>
+            In the end, I created my about and documentation page to finish my project and make them responsive.
+        </p>
+
+        <span>This was my FFXII API Project, I hope you enjoyed the content.</span>
+        <img style="width: 80%; margin: 0 auto;" src="{% static 'ffweb/images/hands-gif.gif' %}" alt="">
+        </div>
+
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const body = document.body;
+            body.classList.add('about');
+        })
+    </script>
+{% endblock main_content %}

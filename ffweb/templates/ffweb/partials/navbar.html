@@ -1,0 +1,49 @@
+{% load static %}
+
+<nav class="navbar-content-container flex row">
+    <div class="navbar-content-links flex-row">
+        {% if page == 'home' %}
+
+            <a  href="{% url 'ffweb:about' %}">About</a>
+            <a href="{% url 'ffweb:documentation' %}">Documentation</a>
+            
+        {% elif page == 'about' %}
+
+            <a  href="{% url 'ffweb:home' %}">Home</a>
+            <a  href="{% url 'ffweb:documentation' %}">Documentation</a>
+
+        {% else %}
+
+            <a style="color: black;" href="{% url 'ffweb:home' %}">Home</a>
+            <a style="color: black;" href="{% url 'ffweb:about' %}">About</a>
+
+        {% endif %}
+        
+    </div>
+
+    <div class="navbar-content-links-mobile flex-column">
+        {% if page == 'home' %}
+
+            <a  href="{% url 'ffweb:about' %}">About</a>
+            <a href="{% url 'ffweb:documentation' %}">Documentation</a>
+            
+        {% elif page == 'about' %}
+
+            <a  href="{% url 'ffweb:home' %}">Home</a>
+            <a  href="{% url 'ffweb:documentation' %}">Documentation</a>
+
+        {% else %}
+
+            <a style="color: black;" href="{% url 'ffweb:home' %}">Home</a>
+            <a style="color: black;" href="{% url 'ffweb:about' %}">About</a>
+
+        {% endif %}
+        
+    </div>
+    <i class="fa-solid fa-bars icon-mobile-nav icon-open"></i>
+    <i class="fa-solid fa-xmark icon-mobile-nav icon-close"></i>
+    {% if page == 'home' %}
+    <img class="logo" src="{% static 'ffweb/images/logo.png' %}" alt="FFXII">
+    {% endif %}
+
+</nav>
