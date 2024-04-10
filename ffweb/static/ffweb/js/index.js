@@ -95,17 +95,17 @@ async function getData() {
 
 function getVaanUrl() {
     const url = document.getElementById('url');
-    url.value = 'http://127.0.0.1:8000/api/characters/filter?name=vaan'
+    url.value = 'https://ffxiiapi.onrender.com/api/characters/filter?name=vaan'
 }
 function getAllCharUrl() {
     const url = document.getElementById('url');
-    url.value = 'http://127.0.0.1:8000/api/characters/all'
+    url.value = 'https://ffxiiapi.onrender.com/api/characters/all'
 }
 function getZodiarkUrl() {
     const url = document.getElementById('url');
-    url.value = 'http://127.0.0.1:8000/api/espers/filter?name_esper=zodiark'
+    url.value = 'https://ffxiiapi.onrender.com/api/espers/filter?name_esper=zodiark'
 }
 function getAllEsperUrl() {
     const url = document.getElementById('url');
-    url.value = 'http://127.0.0.1:8000/api/espers/all'
+    url.value = 'https://ffxiiapi.onrender.com/api/espers/all'
 }

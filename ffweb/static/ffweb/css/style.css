@@ -954,8 +954,8 @@ code {
     
     .form-api {
         width: 100%;
-        align-items: start;
-        justify-content: start;
+        align-items: center;
+        justify-content: center;
         left: 0px;
     }
     #url {
