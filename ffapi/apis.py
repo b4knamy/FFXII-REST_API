@@ -1,5 +1,4 @@
-from .models import Esper
-from time import sleep
+
 
 
 
@@ -182,21 +181,3 @@ GAME_INFORMATIONS = {
     }
 }
 
-
-def salvaresp():
-    a = GAME_INFORMATIONS['espers']
-    for i, esper in enumerate(a):
-        print(esper)
-        print(a[esper])
-        newesper = Esper(
-            name_esper=a[esper],
-            name=a[esper]['name'],
-            sign=a[esper]['sign'],
-            element=a[esper]['element']
-        )
-        newesper.save()
-        print('salvei?\n\n\n')
-        sleep(1)
-
-
-bew = '111'
